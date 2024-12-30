@@ -3,6 +3,7 @@ import Image from "next/image";
 import { client } from "../../../sanity/lib/client";
 import { urlForImage } from "../../../sanity/lib/image";
 import { PortableText } from "@portabletext/react";
+import CommentSection from "@/components/CommentSection";
 // import { components } from "@/components/CustomComponent";
 
 export const revalidate = 60; //seconds
@@ -91,6 +92,7 @@ export default async function page({params:{slug}}:{params:{slug:string}}) {
         />
         
       </section>
+      <CommentSection/>
     </article>
   );
 }
