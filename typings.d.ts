@@ -5,8 +5,14 @@ type Post = {
     slug:string
 }
 
-type PageProps = {
-    params: {
-      slug: string;
+type Post = {
+  title: string;
+  summary: string;
+  image: {
+    asset: {
+      _type: string;
+      _ref: string;
     };
   };
+  slug: string;
+};
